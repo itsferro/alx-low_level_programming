@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * this program uses puts to output a text
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

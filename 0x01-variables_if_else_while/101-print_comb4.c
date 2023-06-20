@@ -4,7 +4,7 @@
   * main - Prints a serie of 3digit numbers with commas
   *
   * Return: Always (Success);
-  * */
+  */
 int main(void)
 {
 	int n;

@@ -20,23 +20,22 @@ int main(void)
 		{
 			for (t = tens; t <= '9'; t++)
 			{
-				for (o = (ones + 1); o <= '9'; o++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
 					putchar(tens);
 					putchar(ones);
 					putchar(' ');
 					putchar(t);
 					putchar(o);
-					if (tens != '9' && ones != '8' && t != '9' && o != '9')
+					if (tens != '9' || ones != '8' || t != '9' || o != '9') /* check for the last iteration */
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				o = '0';
 			}
 		}
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }

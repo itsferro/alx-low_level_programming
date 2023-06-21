@@ -8,13 +8,14 @@
 int main(void)
 {
 	long int pn1, pn2, vh;
+	int i;
 
 	pn2 = 1;
 	pn1 = 2;
 
 	printf("%ld, ", pn2);
 	printf("%ld, ", pn1);
-	for (int i = 0; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		vh = pn1;
 		pn1 = pn1 + pn2;

@@ -41,4 +41,9 @@ int _abs(int);
  */
 int print_last_digit(int);
 
+/**
+ * jack_bauer - prints the time
+ */
+void jack_bauer(void);
+
 #endif

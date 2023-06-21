@@ -31,4 +31,9 @@ int _isalpha(int c);
  */
 int print_sign(int n);
 
+/**
+ * _abs - prints the absolute value of a number
+ */
+int _abs(int);
+
 #endif

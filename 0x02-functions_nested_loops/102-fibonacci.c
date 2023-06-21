@@ -18,7 +18,7 @@ int main(void)
 		vh = pn1;
 		pn1 = pn1 + pn2;
 		pn2 = vh;
-		if (i < 50)
+		if (i < 49)
 		{
 			printf("%ld, ", pn1);
 		}

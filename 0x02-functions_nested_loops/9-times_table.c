@@ -3,10 +3,6 @@
 /**
  * times_table - print the times table for number 9
  *
- * @i: counter for the first loop witch represents the columns
- * @j: counter for the second loop witch represents the rows
- * @n: represent the number that wil be printed
- *
  * Return: void
  */
 void times_table(void)

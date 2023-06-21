@@ -19,7 +19,7 @@ int main(void)
 			sum = sum + i;
 		}
 		what_is_left = i % 5;
-		if (what_is_left == 0)
+		else if (what_is_left == 0)
 		{
 			sum = sum + i;
 		}

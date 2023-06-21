@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int what_is_left, sum,  i;
+	int sum,  i;
 
 	sum = 0;
 	for (; i < 1024; i++)

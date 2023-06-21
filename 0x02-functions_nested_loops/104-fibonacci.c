@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	float pn1, pn2, vh;
+	unsigned int pn1, pn2, vh;
 	int i;
 
 	pn2 = 0.0;
@@ -20,11 +20,11 @@ int main(void)
 		pn2 = vh;
 		if (i < 97)
 		{
-			printf("%.0f, ", pn1);
+			printf("%u, ", pn1);
 		}
 		else
 		{
-			printf("%.0f", pn1);
+			printf("%u", pn1);
 		}
 	}
 	printf("\n");

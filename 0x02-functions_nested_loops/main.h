@@ -46,4 +46,9 @@ int print_last_digit(int);
  */
 void jack_bauer(void);
 
+/**
+ * times_table - print the times table for number 9
+ */
+void times_table(void);
+
 #endif

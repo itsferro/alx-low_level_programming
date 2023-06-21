@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	int pn1, pn2, vh, i;
+	long int pn1, pn2, vh;
 
 	pn2 = 1;
 	pn1 = 2;
 
 	printf("%d, ", pn2);
 	printf("%d, ", pn1);
-	for (i = 0; i < 50; i++)
+	for (int i = 0; i < 50; i++)
 	{
 		vh = pn1;
 		pn1 = pn1 + pn2;

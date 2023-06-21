@@ -27,7 +27,8 @@ int main(void)
 					putchar(' ');
 					putchar(t);
 					putchar(o);
-					if (tens != '9' || ones != '8' || t != '9' || o != '9') /* check for the last iteration */
+					/* check for the last iteration */
+					if (tens != '9' || ones != '8' || t != '9' || o != '9')
 					{
 						putchar(',');
 						putchar(' ');
@@ -37,5 +38,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }

@@ -10,11 +10,9 @@ int main(void)
 	long int pn1, pn2, vh;
 	int i;
 
-	pn2 = 1;
-	pn1 = 2;
+	pn2 = 0;
+	pn1 = 1;
 
-	printf("%ld, ", pn2);
-	printf("%ld, ", pn1);
 	for (i = 0; i < 50; i++)
 	{
 		vh = pn1;

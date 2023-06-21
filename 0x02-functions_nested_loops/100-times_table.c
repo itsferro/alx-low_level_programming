@@ -27,12 +27,15 @@ void print_times_table(int n)
 				} else if (n1 <= 9)
 				{
 					printf(",   %d", n);
-				} else
+				} else if (n1 <= 99)
 				{
 					printf(",  %d", n);
+				} else
+				{
+					printf(", %d", n);
 				}
 			}
-			printf('\n');
+			printf("\n");
 		}
 	}
 }

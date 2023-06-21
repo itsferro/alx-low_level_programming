@@ -26,13 +26,13 @@ void print_times_table(int n)
 					printf("0");
 				} else if (n1 <= 9)
 				{
-					printf(",   %d", n);
+					printf(",   %d", n1);
 				} else if (n1 <= 99)
 				{
-					printf(",  %d", n);
+					printf(",  %d", n2);
 				} else
 				{
-					printf(", %d", n);
+					printf(", %d", n3);
 				}
 			}
 			printf("\n");

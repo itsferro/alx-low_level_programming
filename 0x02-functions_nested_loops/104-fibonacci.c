@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	long int pn1, pn2, vh;
+	float pn1, pn2, vh;
 	int i;
 
-	pn2 = 0;
-	pn1 = 1;
+	pn2 = 0.0;
+	pn1 = 1.0;
 
 	for (i = 0; i < 98; i++)
 	{
@@ -20,11 +20,11 @@ int main(void)
 		pn2 = vh;
 		if (i < 97)
 		{
-			printf("%ld, ", pn1);
+			printf("%.0f, ", pn1);
 		}
 		else
 		{
-			printf("%ld", pn1);
+			printf("%.0f", pn1);
 		}
 	}
 	printf("\n");

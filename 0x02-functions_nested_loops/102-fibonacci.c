@@ -12,8 +12,8 @@ int main(void)
 	pn2 = 1;
 	pn1 = 2;
 
-	printf("%d, ", pn2);
-	printf("%d, ", pn1);
+	printf("%ld, ", pn2);
+	printf("%ld, ", pn1);
 	for (int i = 0; i < 50; i++)
 	{
 		vh = pn1;
@@ -21,11 +21,11 @@ int main(void)
 		pn2 = vh;
 		if (i < 50)
 		{
-			printf("%d, ", pn1);
+			printf("%ld, ", pn1);
 		}
 		else
 		{
-			printf("%d", pn1);
+			printf("%ld", pn1);
 		}
 	}
 	printf("\n");

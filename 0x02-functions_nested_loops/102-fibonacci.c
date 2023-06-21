@@ -13,7 +13,7 @@ int main(void)
 	pn1 = 2;
 
 	printf("%d, ", pn2);
-	ptintf("%d, ", pn1);
+	printf("%d, ", pn1);
 	for (i = 0; i <= 50; i++)
 	{
 		vh = pn1;

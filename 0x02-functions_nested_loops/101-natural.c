@@ -13,13 +13,7 @@ int main(void)
 	sum = 0;
 	for (; i < 1024; i++)
 	{
-		what_is_left = i % 3;
-		if (what_is_left == 0)
-		{
-			sum = sum + i;
-		}
-		what_is_left = i % 5;
-		else if (what_is_left == 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
 			sum = sum + i;
 		}

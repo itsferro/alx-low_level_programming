@@ -10,8 +10,8 @@ int main(void)
 	unsigned long int pn1, pn2, vh;
 	int i;
 
-	pn2 = 0.0;
-	pn1 = 1.0;
+	pn2 = 0;
+	pn1 = 1;
 
 	for (i = 0; i < 98; i++)
 	{

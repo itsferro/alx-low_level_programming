@@ -8,7 +8,7 @@
  */
 void print_square(int size)
 {
-	int L, W;
+	int l, w;
 
 	if (size <= 0)
 	{
@@ -16,9 +16,9 @@ void print_square(int size)
 	}
 	else
 	{
-		for (L = 0; L < size; L++)
+		for (l = 0; l < size; l++)
 		{
-			for (W = 0; W < size; W++)
+			for (w = 0; w < size; w++)
 			{
 				_putchar('#');
 			}

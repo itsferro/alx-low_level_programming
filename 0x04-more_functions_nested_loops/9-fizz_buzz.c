@@ -11,9 +11,9 @@
 int main(void)
 {
 	int i;
-	char* x3 = "Fizz";
-	char* x5 = "Buzz";
-	char* x3_x5 = "FizzBuzz";
+	char *x3 = "Fizz";
+	char *x5 = "Buzz";
+	char *x3_x5 = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
 	{

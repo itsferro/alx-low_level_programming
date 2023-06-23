@@ -1,7 +1,7 @@
 #ifndef MAIN
 #define MAIN
 
-void _putchar(void);
+int _putchar(char c);
 
 int _isupper(int c);
 

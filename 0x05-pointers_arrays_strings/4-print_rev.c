@@ -9,7 +9,7 @@
  */
 void print_rev(char *s)
 {
-	char *f = *s;
+	char *f = s;
 
 	while (*s != '\0')
 	{

@@ -11,16 +11,19 @@ void print_rev(char *s)
 {
 	char *f = s;
 
-	while (*s != '\0')
+	if (*s != '\0')
 	{
-		s++;
-	}
-	s--;
-	while (*s != *f)
-	{
-		_putchar(*s);
+		while (*s != '\0')
+		{
+			s++;
+		}
 		s--;
+		while (*s != *f)
+		{
+			_putchar(*s);
+			s--;
+		}
+		_putchar(*f);
 	}
-	_putchar(*f);
 	_putchar('\n');
 }

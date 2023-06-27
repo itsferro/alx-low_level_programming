@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - prints a string, followed by a new line, to stdout.
+ * print_rev - prints a string, followed by a new line, to stdout.
  *
  * @s: a pointer to a character
  *
@@ -13,6 +13,7 @@ void print_rev(char *s)
 	{
 		s++;
 	}
+	_putchar(*s);
 	while (*s == '\0')
 	{
 		_putchar(*s);

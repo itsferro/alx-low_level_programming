@@ -3,20 +3,20 @@
 /**
  * _puts - prints a string, followed by a new line, to stdout.
  *
- * @str: a pointer to a character
+ * @s: a pointer to a character
  *
  * Return: void
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		str++;
+		s++;
 	}
-	while (*str == '\0')
+	while (*s == '\0')
 	{
-		_putchar(*str);
-		str--;
+		_putchar(*s);
+		s--;
 	}
 	_putchar('\n');
 }

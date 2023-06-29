@@ -12,11 +12,12 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, return_value;
+	int i, rtrn_value;
 
+	i = 0;
 	rtrn_value = 0;
 
-	while (*s1 != '\0' && *s2 != '\0' && return_value == 0)
+	while (*s1 != '\0' && *s2 != '\0' && rtrn_value == 0)
 	{
 		if (s1[i] > s2[i])
 		{
@@ -28,13 +29,14 @@ int _strcmp(char *s1, char *s2)
 		}
 		s1++;
 		s2++;
+		i++;
 	}
 
 	if (rtrn_value > 0)
 	{
 		return (15);
 	}
-	else if (return_value < 0)
+	else if (rtrn_value < 0)
 	{
 		return (-15);
 	}

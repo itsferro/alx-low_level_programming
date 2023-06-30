@@ -9,7 +9,8 @@
  */
 void print_number(int n)
 {
-	unsigned int tens = 1, digit, positive = n;
+	unsigned int digit, positive = n;
+	double tens = 1;
 
 	if (n == 0)
 		_putchar('0');

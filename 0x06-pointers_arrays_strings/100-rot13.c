@@ -25,4 +25,5 @@ char *rot13(char *str)
 		}
 		str[i] = c;
 	}
+	return (str);
 }

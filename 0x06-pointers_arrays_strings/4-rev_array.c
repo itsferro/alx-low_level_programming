@@ -10,25 +10,27 @@
  */
 void reverse_array(int *a, int n)
 {
-	int tmp, i;
+	int tmp[], i;
 
 	tmp = 0;
 	if (n % 10 == 0)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			tmp = a[i];
-			a[i] = a[n - i];
-			a[n - i] = tmp;
+			n -= i;
+			tmp[i] = a[i];
+			a[i] = a[n];
+			a[n] = tmp[i];
 		}
 	}
 	else
 	{
 		for (i = 0; i < n; i++)
 		{
-			tmp = a[i];
-			a[i] = a[n - i];
-			a[n - i] = tmp;
+			n -= i;
+			tmp[i] = a[i];
+			a[i] = a[n];
+			a[n] = tmp[i];
 		}
 	}
 }

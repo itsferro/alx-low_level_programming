@@ -9,21 +9,27 @@
  */
 char *rot13(char *str)
 {
-	int i;
-	char c;
+	int a[53] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+		     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+		     'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+		     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+		     'W', 'X', 'Y', 'Z'};
+	int b[53] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+		     'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+		     'l', 'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
+		     'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+		     'J', 'K', 'L', 'M'};
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (j = 0; str[j] != '\0'; j++)
 	{
-		c = str[i];
-		if (c >= 'a' && c <= 'z')
-		{
-			c = ((c - 'a' + 13) % 26) + 'a';
-		}
-		else if (c >= 'A' && c <= 'Z')
-		{
-			c = ((c - 'A' + 13) % 26) + 'A';
-		}
-		str[i] = c;
+		i = 0;
+		while (a[i] != '\0' && str[j] != a[i])
+			i++;
+
+		if (str[j] == a[i])
+			str[j] = b[i];
 	}
+
 	return (str);
 }

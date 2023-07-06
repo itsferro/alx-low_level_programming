@@ -1,47 +1,79 @@
 #include "main.h"
+#include <stdio.h>
+
+void print_c(char *c, int i)
+{
+	while (i >= 0)
+	{
+		printf("%c", *c);
+		i++;
+		c++;
+	}
+}
 
 /**
- * compare - compare head and tail indices for match
- * @head: index starting from left of string
- * @tail: index starting from right of string, moving backwards
- * Return: 1 if palindrome, 0 if not
+ * the_end_of_s - gets the last character of the string
+ *
+ * @len: a string
+ *
+ * Return: a string
  */
-
-int compare(char *head, char *tail)
+char *the_end_of_s(char *len, int i)
 {
+	if (*len == '\0')
+	{
+		return (0);
+		print_c(len, i);
+	}
 
-	if (head >= tail)
+	i++;
+	len++;
+	return (the_end_of_s(len));
+}
+
+/**
+ * is_it_really - checks if the string is a palindrome or not
+ *
+ * @s: a string
+ * @c: a string
+ *
+ * Return: 1 if a string is a palindrome and 0 if not
+ */
+int is_it_really(char *s, char *c)
+{
+	/*if (*s != *c || *s == '\0')*/
+	/*	return (0);*/
+
+	/*s++;*/
+	/*c--;*/
+	/*return (is_it_really(s, c));*/
+	if (s >= c)
 		return (1);
-	if (*head == *tail)
-		return (compare(head + 1, tail - 1));
+	if (*s == *c)
+	{
+		printf("%c, %c", *s, *c);
+		s++;
+		c--;
+		return (is_it_really(s, c));
+	}
 
 	return (0);
 }
 
 /**
- * _strlen - find length of string to access last index
- * @s: string
- * Return: length
+ * is_palindrome - checks if the string is a palindrome or not
+ *
+ * @s: a string
+ *
+ * Return: 1 if a string is a palindrome and 0 if not
  */
-
-int _strlen(char *s)
-{
-
-	if (*s == '\0')
-		return (0);
-	s++;
-	return (1 + (_strlen(s)));
-}
-
-/**
- * is_palindrome - check if palindrome
- * @s: string to check
- * Return: 1 if palindrome, 0 if not
- */
-
 int is_palindrome(char *s)
 {
-	int len = _strlen(s);
+	int i = 0;
+	char *c = the_end_of_s(s, i);
 
-	return (compare(s, (s + len - 1)));
+	if (*s == '\0' || *(s + 1) == '\0')
+		return (1);
+
+	return (is_it_really(s, c));
 }

@@ -16,7 +16,7 @@ int prime_test_function(int n, int devider)
 	if (n % devider == 0 && devider != n)
 		return (1);
 	else
-		prime_test_function(n, devider++);
+		return (prime_test_function(n, devider++));
 }
 
 /**
@@ -32,5 +32,5 @@ int is_prime_number(int n)
 {
 	int devider = 2;
 
-	prime_test_function(n, devider);
+	return (prime_test_function(n, devider));
 }

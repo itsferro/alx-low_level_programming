@@ -11,12 +11,12 @@
  */
 int prime_test_function(int n, int devider)
 {
-	if (devider > n)
-		return (0);
-	if (n % devider == 0 && devider != n)
+	if (devider == n)
 		return (1);
-	else
-		return (prime_test_function(n, devider++));
+	if (n % devider == 0)
+		return (0);
+
+	return (prime_test_function(n, devider++));
 }
 
 /**
@@ -31,6 +31,11 @@ int prime_test_function(int n, int devider)
 int is_prime_number(int n)
 {
 	int devider = 2;
+
+	if (n == 2)
+		return (1);
+	if (n == 3)
+		return (1);
 
 	return (prime_test_function(n, devider));
 }

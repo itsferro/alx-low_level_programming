@@ -15,8 +15,8 @@ int prime_test_function(int n, int devider)
 		return (1);
 	if (n % devider == 0)
 		return (0);
-
-	return (prime_test_function(n, devider++));
+	devider++;
+	return (prime_test_function(n, devider));
 }
 
 /**

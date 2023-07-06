@@ -1,56 +1,47 @@
 #include "main.h"
 
 /**
- * the_end_of_s - gets the last character of the string
- *
- * @c: a string
- *
- * Return: a string
+ * compare - compare head and tail indices for match
+ * @head: index starting from left of string
+ * @tail: index starting from right of string, moving backwards
+ * Return: 1 if palindrome, 0 if not
  */
-char the_end_of_s(char *c)
-{
-	if (*c == '\0')
-		return (c);
 
-	c++;
-	return (the_end_of_s(c));
+int compare(char *head, char *tail)
+{
+
+	if (head >= tail)
+		return (1);
+	if (*head == *tail)
+		return (compare(head + 1, tail - 1));
+
+	return (0);
 }
 
 /**
- * is_it_really - checks if the string is a palindrome or not
- *
- * @s: a string
- * @c: a string
- *
- * Return: 1 if a string is a palindrome and 0 if not
+ * _strlen - find length of string to access last index
+ * @s: string
+ * Return: length
  */
-int is_it_really(char *s, char *c)
+
+int _strlen(char *s)
 {
-	if (*s == *c && *s != '\0')
-	{
-		s++;
-		c--;
-		return (is_it_really(s, c));
-	}
-	else
-	{
+
+	if (*s == '\0')
 		return (0);
-	}
+	s++;
+	return (1 + (_strlen(s)));
 }
 
 /**
- * is_palindrome - checks if the string is a palindrome or not
- *
- * @s: a string
- *
- * Return: 1 if a string is a palindrome and 0 if not
+ * is_palindrome - check if palindrome
+ * @s: string to check
+ * Return: 1 if palindrome, 0 if not
  */
+
 int is_palindrome(char *s)
 {
-	char *c = the_end_of_s(s);
+	int len = _strlen(s);
 
-	if (*s == '\0' || *(s + 1) == '\0')
-		return (1);
-
-	return (is_it_really(s, c));
+	return (compare(s, (s + len - 1)));
 }

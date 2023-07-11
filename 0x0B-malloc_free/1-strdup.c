@@ -35,9 +35,14 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-	int string_length = _strlen(str);
+	int string_length;
 	char *new_string;
 	int i = 0;
+
+	if (str == NULL)
+		return (NULL);
+
+	string_length = _strlen(str);
 
 	if (string_length == 0)
 		return (NULL);

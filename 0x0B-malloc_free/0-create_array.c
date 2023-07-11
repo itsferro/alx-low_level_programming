@@ -10,7 +10,7 @@
  * @c: a character
  *
  * Return:
- *	a pointer to the array 
+ *	a pointer to the array
  *	NULL if size = 0, or NULL if it fails
  */
 char *create_array(unsigned int size, char c)

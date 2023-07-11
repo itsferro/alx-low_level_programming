@@ -18,7 +18,7 @@ int _strlen(char *s)
 		s++;
 		i++;
 	}
-	i++;
+	/*i++;*/
 	return (i);
 }
 
@@ -42,15 +42,15 @@ char *str_concat(char *s1, char *s2)
 	char *new_string;
 	int i, n;
 
-	if (s1 == NULL)
-		s1[0] = '\0';
-	if (s2 == NULL)
-		s2[0] = '\0';
-
 	s1_len = _strlen(s1);
 	s2_len = _strlen(s2);
 
-	new_string = (char *) malloc((s1_len + s2_len) * sizeof(char));
+	if (s1 == NULL)
+		s1_len = 0;
+	if (s2 == NULL)
+		s2_len = 0;
+
+	new_string = (char *) malloc((s1_len + s2_len - 1) * sizeof(char));
 
 	if (new_string == NULL)
 		return (NULL);
@@ -59,9 +59,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		new_string[i] = s1[i];
 	}
-	for (i = 0; i < s1_len; i++)
+	for (i = 0; i < s2_len; i++)
 	{
-		n = i + (s1_len - 1);
+		n = i + s1_len;
 		new_string[n] = s2[i];
 	}
 

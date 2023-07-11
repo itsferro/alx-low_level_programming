@@ -18,7 +18,7 @@ int _strlen(char *s)
 		s++;
 		i++;
 	}
-	/*i++;*/
+	i++;
 	return (i);
 }
 
@@ -44,12 +44,13 @@ char *str_concat(char *s1, char *s2)
 
 	s1_len = _strlen(s1);
 	s2_len = _strlen(s2);
+	printf("s1_len = %d\ns2_len = %d\n", s1_len, s2_len);
 
-	if (s1 == NULL)
+	/*if (s1 == NULL)
 		s1_len = 0;
 	if (s2 == NULL)
 		s2_len = 0;
-
+*/
 	new_string = (char *) malloc((s1_len + s2_len - 1) * sizeof(char));
 
 	if (new_string == NULL)

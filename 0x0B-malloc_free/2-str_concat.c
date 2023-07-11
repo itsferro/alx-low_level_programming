@@ -42,13 +42,13 @@ char *str_concat(char *s1, char *s2)
 	char *new_string;
 	int i, n;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	s1_len = _strlen(s1) - 1;
 	s2_len = _strlen(s2);
-
-	if (s1 == NULL)
-		s1_len = 0;
-	if (s2 == NULL)
-		s2_len = 0;
 
 	new_string = (char *) malloc((s1_len + s2_len) * sizeof(char));
 

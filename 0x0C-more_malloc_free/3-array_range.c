@@ -16,16 +16,13 @@
 
 int *array_range(int min, int max)
 {
-	void *a;
+	int *a;
 	unsigned int c, i;
 
 	if (min >= max)
 		return (NULL);
 
-	for (c = 0; max > min; c++)
-		max--;
-
-	c++;
+	c = (max - min) + 1;
 
 	a = malloc(sizeof(int) * c);
 
@@ -33,7 +30,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	for (i = 0; i <= c; i++)
-		*((int *)a + i) = min + i;
+		a[i] = min + i;
 
 	return (a);
 }

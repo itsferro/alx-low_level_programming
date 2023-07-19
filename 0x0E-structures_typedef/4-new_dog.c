@@ -38,7 +38,7 @@ char *_strcpy(char *dest, char *src)
 
 	len = _strlen(src);
 
-	dest = malloc(len);
+	dest = malloc(len + 1);
 	if (dest == NULL)
 		return (NULL);
 

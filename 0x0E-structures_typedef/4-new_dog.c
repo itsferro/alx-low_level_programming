@@ -80,9 +80,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		dog->name = _strcpy(n, name);
 	}
 	else
-	{
 		dog->name = NULL;
-	}
 
 	if (owner != NULL)
 	{
@@ -96,9 +94,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		dog->owner = _strcpy(o, owner);
 	}
 	else
-	{
 		dog->owner = NULL;
-	}
 
 	return (dog);
 }

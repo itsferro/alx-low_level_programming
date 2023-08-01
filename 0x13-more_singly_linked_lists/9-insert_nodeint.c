@@ -16,10 +16,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (head == NULL)
 		return (NULL);
 
-	current_node = get_nodeint_at_index(*head, idx);
-	if (current_node == NULL)
-		return (NULL);
-
 	current_node = get_nodeint_at_index(*head, idx - 1);
 	if (current_node == NULL)
 		return (NULL);

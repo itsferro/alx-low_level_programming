@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stddef.h>
 
 /**
  * print_listint - prints all the elements of a listint_t list.
@@ -10,14 +8,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *p = h;
 	size_t count = 0;
 
-	while (p != NULL)
+	while (h != NULL)
 	{
+		printf("%d\n", h->n);
 		count++;
-		printf("%d\n", p->n);
-		p = p->next;
+		h = h->next;
 	}
 
 	return (count);

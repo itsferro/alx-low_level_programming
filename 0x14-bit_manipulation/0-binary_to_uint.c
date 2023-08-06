@@ -6,10 +6,10 @@
  * @b: a string.
  *
  * Return:
- * 	the converted number.
- * 	0 if:
- * 		-there is one or more chars in the string b that is not 0 or 1.
- * 		-b is NULL.
+ *	the converted number.
+ *	0 if:
+ *		-there is one or more chars in the string b that is not 0 or 1.
+ *		-b is NULL.
  */
 unsigned int binary_to_uint(const char *b)
 {

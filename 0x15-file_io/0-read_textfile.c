@@ -15,7 +15,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	long int letters_read = 0;
+	long int letters_read = 0, letters_written = 0;
 	int file_descriptor = 0;
 	char *buffer;
 
@@ -34,13 +34,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	letters_read = read(file_descriptor, buffer, letters);
-	if (letters_read < 0)
+	if ((letters_read) == (-1))
 	{
 		free(buffer);
 		close(file_descriptor);
 		return (0);
 	}
-	printf("%s", buffer);
+	letters_written = write(STDOUT_FILENO, buffer, letters_read);
+	if ((letters_written) == (-1) || letters_written != letters_read)
+	{
+		free(buffer);
+		close(file_descriptor);
+		return (0);
+	}
 	close(file_descriptor);
 	free(buffer);
 	return (letters_read);

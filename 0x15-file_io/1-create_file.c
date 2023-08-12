@@ -3,7 +3,7 @@
 /**
  * create_file - creates a file.
  *
- * @filenamr: the file name string.
+ * @filename: the file name string.
  * @text_content: a string holds the text
  *	that will be written in  to the file.
  *

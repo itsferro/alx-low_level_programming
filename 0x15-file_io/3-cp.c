@@ -47,11 +47,20 @@ int main(int argc, char *argv[])
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 		print_error("Error: Can't read from file", file_from, 98);
-
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC,
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-	if (fd_to == -1)
-		print_error("Error: Can't write to", file_to, 99);
+	
+	if (access(file_to, F_OK) == 0)
+	{
+		fd_to = open(file_to, O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+		if (fd_to == -1)
+			print_error("Error: Can't write to", file_to, 99);
+	}
+	else
+	{
+		fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC);
+		if (fd_to == -1)
+			print_error("Error: Can't write to", file_to, 99);
+		chmod(file_to, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	}
 
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{

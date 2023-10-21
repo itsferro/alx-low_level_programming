@@ -16,7 +16,7 @@
  */
 void print_error(const char *message, const char *file_name, int exit_code)
 {
-	dprintf(STDERR_FILENO, "Error: %s %s\n", message, file_name);
+	dprintf(STDERR_FILENO, "%s %s\n", message, file_name);
 	exit(exit_code);
 }
 
@@ -46,28 +46,28 @@ int main(int argc, char *argv[])
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
-		print_error("Can't read from file", file_from, 98);
+		print_error("Error: Can't read from file", file_from, 98);
 
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC,
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 	if (fd_to == -1)
-		print_error("Can't write to", file_to, 99);
+		print_error("Error: Can't write to", file_to, 99);
 
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written == -1)
-			print_error("Can't write to", file_to, 99);
+			print_error("Error: Can't write to", file_to, 99);
 	}
 
 	if (bytes_read == -1)
-		print_error("Can't read from file", file_from, 98);
+		print_error("Error: Can't read from file", file_from, 98);
 
 	if (close(fd_from) == -1)
-		print_error("Can't close fd", file_from, 100);
+		print_error("Error: Can't close fd", file_from, 100);
 
 	if (close(fd_to) == -1)
-		print_error("Can't close fd", file_to, 100);
+		print_error("Error: Can't close fd", file_to, 100);
 
 	return (0);
 }

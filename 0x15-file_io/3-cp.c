@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC);
+		fd_to = open(file_to, O_WRONLY | O_CREAT);
 		if (fd_to == -1)
 			print_error("Error: Can't write to", file_to, 99);
 		chmod(file_to, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);

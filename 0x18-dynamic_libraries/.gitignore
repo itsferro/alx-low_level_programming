@@ -1,2 +1,5 @@
 functions.c
 library.o
+operations.c
+operations.o
+

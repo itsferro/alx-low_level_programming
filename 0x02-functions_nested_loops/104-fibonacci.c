@@ -13,7 +13,7 @@ int main(void)
 	pn2 = 0;
 	pn1 = 1;
 
-	for (i = 0; i < 99; i++)
+	for (i = 0; i < 98; i++)
 	{
 		vh = pn1;
 		pn1 = pn1 + pn2;

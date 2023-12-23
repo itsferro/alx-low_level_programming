@@ -12,7 +12,7 @@ void print(int i, long int sum, long int sum1, long int sum2)
 {
 	if (i < 91)
 		printf("%lu, ", sum);
-	else if (!(i == 98))
+	else if (!(i == 97))
 		printf("%lu%lu, ", sum1, sum2);
 	else
 		printf("%lu%lu\n", sum1, sum2);
@@ -31,7 +31,7 @@ int main(void)
 
 	pn1 = 0;
 	pn2 = 1;
-	for (i = 0; i < 99; i++)
+	for (i = 0; i < 98; i++)
 	{
 		if (i < 91)
 		{

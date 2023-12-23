@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long int pn1, pn2, vh;
+	long double pn1, pn2, vh;
 	int i;
 
 	pn2 = 0;
@@ -20,11 +20,11 @@ int main(void)
 		pn2 = vh;
 		if (i < 97)
 		{
-			printf("%lu, ", pn1);
+			printf("%.Lf, ", pn1);
 		}
 		else
 		{
-			printf("%lu", pn1);
+			printf("%.Lf", pn1);
 		}
 	}
 	printf("\n");

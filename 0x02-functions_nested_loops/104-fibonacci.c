@@ -29,8 +29,8 @@ int main(void)
 	long int var11, var12, var21, var22;
 	int i, c;
 
-	pn2 = 0;
-	pn1 = 1;
+	pn1 = 0;
+	pn2 = 1;
 	for (i = 0; i < 99; i++)
 	{
 		if (i < 91)

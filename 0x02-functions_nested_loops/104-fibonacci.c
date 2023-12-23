@@ -1,6 +1,24 @@
 #include <stdio.h>
 
 /**
+ * print - prints the sums.
+ *
+ * @i: the counter
+ * @sum: the first sum
+ * @sum1: the second sum
+ * @sum2: the therd sum
+ */
+void print(int i, long int sum, long int sum1, long int sum2)
+{
+	if (i < 91)
+		printf("%lu, ", sum);
+	else if (!(i == 98))
+		printf("%lu%lu, ", sum1, sum2);
+	else
+		printf("%lu%lu\n", sum1, sum2);
+}
+
+/**
  * main - prints the first 98 Fibonacci numbers, starting with 1 and 2
  *
  * Return: Always 0 (success)
@@ -13,15 +31,14 @@ int main(void)
 
 	pn2 = 0;
 	pn1 = 1;
-
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 99; i++)
 	{
 		if (i < 91)
 		{
 			sum = pn1 + pn2;
 			pn1 = pn2;
 			pn2 = sum;
-			printf("%lu, ", sum);
+			print(i, sum, sum1, sum2);
 		}
 		else
 		{
@@ -42,12 +59,8 @@ int main(void)
 			sum2 = (var12 + var22) % 1000000000;
 			c = (var12 + var22) / 1000000000;
 			sum1 = var11 + var21 + c;
-			if (!(i == 97))
-				printf("%lu%lu, ", sum1, sum2);
-			else
-				printf("%lu%lu", sum1, sum2);
+			print(i, sum, sum1, sum2);
 		}
 	}
-	printf("\n");
 	return (0);
 }

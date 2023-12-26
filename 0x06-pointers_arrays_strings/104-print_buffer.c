@@ -3,6 +3,23 @@
 #include <string.h>
 
 /**
+ * print_hex - prints the hexadecimal content (2 chars)
+ * of the buffer, 2 bytes at a time, separated by a space.
+ *
+ * @i: the index.
+ * @hex: the number.
+ *
+ * Return: void.
+ */
+void print_hex(int i, int hex)
+{
+	if (i % 2 != 0)
+		printf("%02x", hex);
+	else
+		printf("%02x ", hex);
+}
+
+/**
  * print_buffer - prints a buffer.
  *
  * @b: a pointer to a string.
@@ -23,10 +40,7 @@ void print_buffer(char *b, int size)
 			for (i = 1; i < 11 && size > 0; i++)
 			{
 				buffer[i - 1] = *b;
-				if (i % 2 != 0)
-					printf("%02x", buffer[i - 1]);
-				else
-					printf("%02x ", buffer[i - 1]);
+				print_hex(i, buffer[i - 1]);
 				index++;
 				b++;
 				size--;

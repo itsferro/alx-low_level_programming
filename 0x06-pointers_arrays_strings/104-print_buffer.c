@@ -13,7 +13,7 @@
 void print_buffer(char *b, int size)
 {
 	char buffer[10];
-	int i, j, index = 0;
+	int i, j, padding, index = 0;
 
 	if (size > 0)
 	{
@@ -33,8 +33,10 @@ void print_buffer(char *b, int size)
 			}
 			if (size == 0)
 			{
-				printf("      ");
-				printf("      ");
+				for(padding = i; padding < 11; padding++)
+				{
+					printf("   ");
+				}
 			}
 			for (j = 1; j < 11 && j < i; j++)
 			{

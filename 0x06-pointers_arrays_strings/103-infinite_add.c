@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,10 +14,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0;
-	int len2 = 0;
-	int result_len = len1 > len2 ? len1 + 1 : len2 + 1;
-	int carry = 0;
+	int len1 = 0, len2 = 0, result_len, carry = 0;
 	int i, j, k, digit1, digit2, digit_sum;
 	int start_index = 0;
 
@@ -28,7 +26,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		len2++;
 	}
-	if (result_len > size_r)
+	result_len = len1 > len2 ? len1 + 1 : len2 + 1;
+	if (result_len >= size_r)
 	{
 		return (0);
 	}

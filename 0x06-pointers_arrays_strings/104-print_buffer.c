@@ -39,7 +39,7 @@ void print_buffer(char *b, int size)
 		}
 		for (j = 1; j < 11 && j < i; j++)
 		{
-			if ((buffer[j - 1] - '0') >= 32)
+			if (buffer[j - 1] >= 32)
 				printf("%c", buffer[j - 1]);
 			else
 				printf(".");

@@ -24,7 +24,7 @@ void print_buffer(char *b, int size)
 			{
 				buffer[i - 1] = *b;
 				if (i % 2 != 0)
-					printf(" %02x", buffer[i - 1]);
+					printf("%02x", buffer[i - 1]);
 				else
 					printf("%02x ", buffer[i - 1]);
 				index++;
@@ -33,9 +33,12 @@ void print_buffer(char *b, int size)
 			}
 			if (size == 0)
 			{
-				for(padding = i; padding < 11; padding++)
+				for (padding = i; padding < 11; padding++)
 				{
-					printf("   ");
+					if (padding % 2 != 0)
+						printf("  ");
+					else
+						printf("   ");
 				}
 			}
 			for (j = 1; j < 11 && j < i; j++)

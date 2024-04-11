@@ -41,7 +41,6 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL || size == 0)
 	{
-		printf("checked:\nsize = %lu\n", size);
 		return (-1);
 	}
 
@@ -49,7 +48,6 @@ int binary_search(int *array, size_t size, int value)
 	r = size - 1;
 	while (l <= r)
 	{
-		/*m = (l + r) / 2;*/
 		m = l + (r - l) / 2;
 		print_array(array, l, r);
 		if (array[m] > value)

@@ -39,8 +39,11 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t l, r, m;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
+	{
+		printf("checked:\nsize = %lu\n", size);
 		return (-1);
+	}
 
 	l = 0;
 	r = size - 1;

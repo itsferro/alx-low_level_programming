@@ -9,5 +9,6 @@ size_t calculate_index(size_t index_l, size_t index_h, int l, int h, int value);
 int interpolation_search(int *array, size_t size, int value);
 size_t binary_search_2(int *array, size_t left, size_t right, int value);
 int exponential_search(int *array, size_t size, int value);
+int advanced_binary(int *array, size_t size, int value);
 
 #endif /* the end of iSEARCH_ALGOS_H*/

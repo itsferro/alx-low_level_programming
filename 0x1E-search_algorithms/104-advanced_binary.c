@@ -28,10 +28,15 @@ int advanced_binary_logic(int *array, size_t left, size_t right, int value)
 
 	mid = left + (right - left) / 2;
 
-	if (array[mid] == value && (mid == left || array[mid - 1] != value))
-		return (i);
+	if (array[mid] == value)
+	{
+		if (array[mid] == value && mid == left && array[mid - 1] == value)
+			return (advanced_binary_logic(array, left - 1, right - 1, value));
+		else
+			return (i);
+	}
 	if (array[mid] >= value)
-		return (advanced_binary_logic(array, left, mid, value));
+		return (advanced_binary_logic(array, left, mid - 1, value));
 	return (advanced_binary_logic(array, (mid + 1), right, value));
 
 }

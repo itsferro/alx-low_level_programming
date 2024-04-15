@@ -17,7 +17,7 @@ void print_array(int *array, size_t l, size_t r)
 	{
 		printf("%u", array[l]);
 		if (l < r)
-			printf(" ,");
+			printf(", ");
 	}
 	printf("\n");
 }
